@@ -1,1 +1,24 @@
-<p>heroes works!</p>
+<div class="row d-flex justify-content-end">
+    <div class="form-inline form-group">
+                    
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th *ngFor="let col of cols" (click)="onChangeColumn(col)">{{ col }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroes$ | async">
+                    <td>{{ hero.id }}</td>
+                    <td>{{ hero.name }}</td>
+                    <td>{{ hero.superPower }}</td>
+                    <td>{{ hero.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
